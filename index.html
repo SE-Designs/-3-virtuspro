@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;800&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/font/bootstrap-icons.min.css" integrity="sha512-YzwGgFdO1NQw1CZkPoGyRkEnUTxPSbGWXvGiXrWk8IeSqdyci0dEDYdLLjMxq1zCoU0QBa4kHAFiRhUL3z2bow==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <title>Virtus.pro - Homepage</title>
+</head>
+<body>
+    <div class="background">
+    </div>
+    <header>
+        <nav class="nav-desk">
+            <div class="logo-container">
+                <a href="#" class="nav-logo"><img src="assets/logo.png" alt="VP logo" width="60px" height="60px"></a>
+            </div>
+            <div class="navigation-container">
+                <ul>
+                    <a href="#"><li class="nav-els">News</li></a>
+                    <a href="#"><li class="nav-els">Teams</li></a>
+                    <a href="#"><li class="nav-els">Matches</li></a>
+                    <a href="#"><li class="nav-els">Results</li></a>
+                    <a href="#"><li class="nav-els">Shop</li></a>
+                    <li class="nav-els drop-el"><a href="#"><span class="drop-a">About <i class="bi bi-caret-down-fill"></i></span></a>
+                        <ul class="dropdown">
+                            <li class="second-li"><a href="#">Abous Us</a></li>
+                            <li class="second-li"><a href="#">Team</a></li>
+                            <li class="second-li"><a href="#">Career</a></li>
+                            <li class="second-li"><a href="#">Partnership</a></li>
+                            <li class="second-li"><a href="#">Media</a></li>
+                            <li class="second-li"><a href="#">Partners</a></li>
+                            <li class="second-li"><a href="#">Contacts</a></li>
+                        </ul>
+                    </li>
+                    <a href="#"><li class="nav-els">Fan Center</li></a>
+                </ul>
+            </div>
+            <div class="search-container">
+                <a id="search-icon" accesskey="s" onclick="toggleSearch()"><i class="bi bi-search"></i></a>
+                <div class="search-input" id="search-input">
+                    <input type="search" name="nav-search" id="nav-search" placeholder="Search..." autofocus>
+                </div>
+            </div>
+            <div class="lang-container">
+                <!-- onclick="toggleLang()" -->
+                <a href="#" class="change-lang"><span>ENG</span></a>
+                <div class="lang-container-option" id="lang-container-option">
+                    <a href="#" class="change-lang-option"><span>RUS</span></a>
+                </div>
+            </div>
+            <div class="mobile-menu">
+                <input onclick="toggleMobileMenu()" type="checkbox" name="mobile-toggle" id="mobile-toggle">
+                <label for="mobile-toggle"><span id="menu-icon"></span></label>
+                <div class="mobile-menu-container">
+                    <div class="mobile-search-container">
+                        <div class="mobile-search-input" id="search-input">
+                            <input type="search" name="nav-search" id="nav-search" placeholder="Search..." autofocus>
+                        </div>
+                        <div class="mobile-search-icon">
+                            <a href="#" id="search-icon"><i class="bi bi-search"></i></a>
+                        </div>
+                    </div>
+                    <div class="mobile-lang-container">
+                        <a href="#" class="mobile-change-lang">
+                            <div class="selected-lang">
+                                <span>ENG</span>
+                            </div>
+                        </a>
+                        <a href="#" class="mobile-change-lang">
+                            <div class="second-lang">
+                                <span>RUS</span>
+                            </div>
+                        </a>
+                    </div>
+                    <ul class="mobile-ul">
+                        <a href="#"><li class="nav-mobile-els">News</li></a>
+                        <a href="#"><li class="nav-mobile-els">Teams</li></a>
+                        <a href="#"><li class="nav-mobile-els">Matches</li></a>
+                        <a href="#"><li class="nav-mobile-els">Results</li></a>
+                        <a href="#"><li class="nav-mobile-els">Shop</li></a>
+                        <li class="nav-els drop-mobile-el"><a href="#" onclick="toggleDropdown()"><span class="drop-a">About <i class="bi bi-caret-down-fill"></i></span></a>
+                            <ul class="dropdown-mobile" id="dropdown-mobile">
+                                <li class="mobile-li"><a href="#"><i class="bi bi-caret-right-fill"></i>Abous Us</a></li>
+                                <li class="mobile-li"><a href="#"><i class="bi bi-caret-right-fill"></i>Team</a></li>
+                                <li class="mobile-li"><a href="#"><i class="bi bi-caret-right-fill"></i>Career</a></li>
+                                <li class="mobile-li"><a href="#"><i class="bi bi-caret-right-fill"></i>Partnership</a></li>
+                                <li class="mobile-li"><a href="#"><i class="bi bi-caret-right-fill"></i>Media</a></li>
+                                <li class="mobile-li"><a href="#"><i class="bi bi-caret-right-fill"></i>Partners</a></li>
+                                <li class="mobile-li"><a href="#"><i class="bi bi-caret-right-fill"></i>Contacts</a></li>
+                            </ul>
+                        </li>
+                        <a href="#"><li class="nav-els">Fan Center</li></a>
+                    </ul>
+                </div>
+            </div>
+            <!-- <hr> -->
+        </nav>
+    </header>
+    <section class="main" id="main">
+        <article class="main-article">
+            <a href="#" class="main-grid">
+                <figure>
+                    <h3 class="article-tag">Warface</h3>
+                    <img src="assets/main-article.png" alt="virtus.pro x warface">
+                </figure>
+                <figcaption>
+                    <h1>Virtus.pro opens a Warface roster and takes part in a new tournament</h1>
+                    <span class="article-date">14.06.2022</span>
+                </figcaption>
+            </a>
+        </article>
+        <section class="articles-grid">
+            <a href="#" class="articles-container">
+                <figure><img src="assets/second-article-1.png" alt="new virtus.pro jersey"></figure>
+                <figcaption>
+                    <h2>New Virtus.pro jersey 2022: attention to style and details</h2>
+                    <div class="article-bottoms">
+                        <h3 class="article-tag">General</h3>
+                        <span class="article-date">10.06.2022</span>
+                    </div>
+                </figcaption>
+            </a>
+            <a href="#" class="articles-container">
+                <figure><img src="assets/second-article-2.png" alt="virtus.pro 2nd place"></figure>
+                <figcaption>
+                    <h2>Virtus.pro takes 2nd place in Winline Dota 2 Champions League Season 11</h2>
+                    <div class="article-bottoms">
+                        <h3 class="article-tag">Dota 2</h3>
+                        <span class="article-date">05.06.2022</span>
+                    </div>
+                </figcaption>
+            </a>
+            <a href="#" class="articles-container">
+                <figure><img src="assets/second-article-3.png" alt="csgo roster is complete"></figure>
+                <figcaption>
+                    <h2>Virtus.pro CS:GO roster is complete: n0rb3r7 and fame are new team members</h2>
+                    <div class="article-bottoms">
+                        <h3 class="article-tag">Cs:go</h3>
+                        <span class="article-date">31.05.2022</span>
+                    </div>
+                </figcaption>
+            </a>
+            <a href="#" class="articles-container">
+                <figure><img src="assets/second-article-4.png" alt="new virtus.pro jersey"></figure>
+                <figcaption>
+                    <h2>Virtus.pro is invited to Winline Dota 2 Champions League Season 11</h2>
+                    <div class="article-bottoms">
+                        <h3 class="article-tag">Dota 2</h3>
+                        <span class="article-date">31.05.2022</span>
+                    </div>
+                </figcaption>
+            </a>
+            <a href="#" class="articles-container">
+                <figure><img src="assets/second-article-5.png" alt="virtus.pro 2nd place"></figure>
+                <figcaption>
+                    <h2>The return of The Bear: RAMZES666 is a new Virtus.pro carry</h2>
+                    <div class="article-bottoms">
+                        <h3 class="article-tag">Dota 2</h3>
+                        <span class="article-date">28.05.2022</span>
+                    </div>
+                </figcaption>
+            </a>
+            <a href="#" class="articles-container">
+                <figure><img src="assets/second-article-6.png" alt="csgo roster is complete"></figure>
+                <figcaption>
+                    <h2>Virtus.pro moves buster and YEKINDAR out of the active roster</h2>
+                    <div class="article-bottoms">
+                        <h3 class="article-tag">Cs:go</h3>
+                        <span class="article-date">23.05.2022</span>
+                    </div>
+                </figcaption>
+            </a>
+        </section>
+        <!-- <section class="matches">
+            <div class="matches-container">
+                <a href="#">
+                    <h4 class="match-name">Winline D2CL Season 11</h4>
+                    <span class="match-stage">Play-Off</span><img src="assets/opponent-1.png" alt="Brame" class="team-1"><span class="match-result">0:2</span><img src="assets/vp-logo.png" alt="Virtus.pro" class="team-2"><span class="team-name-1">Brame</span><span class="team-name-2">Virtus.pro</span>
+                    <hr>
+                    <div class="match-bottom"><a href="#"><span class="match-tag">Dota 2</span></a><span class="match-date">03.06.2022</span></div>
+                </a>
+                <a href="#">
+                    <h4 class="match-name">PGL Major Antwerp 2022</h4>
+                    <span class="match-stage">Legends Stage</span><img src="assets/vp-logo.png" alt="Virtus.pro" class="team-1"><span class="match-result">14 - 16</span><img src="assets/opponent-2.png" alt="Team Vitality" class="team-2"><span class="team-name-1">Virtus.pro</span><span class="team-name-2">Team Vitality</span>
+                    <hr>
+                    <div class="match-bottom"><a href="#"><span class="match-tag">Cs:go</span></a><span class="match-date">16.05.2022</span></div>
+                </a>
+                <a href="#">
+                    <h4 class="match-name">PGL Major Antwerp 2022</h4>
+                    <span class="match-stage">Legends Stage</span><img src="assets/opponent-3.png" alt="Cloud9" class="team-1"><span class="match-result">16 - 12</span><img src="/assets/vp-logo.png" alt="Virtus.pro" class="team-2"><span class="team-name-1">Cloud9</span><span class="team-name-2">Virtus.pro</span>
+                    <hr>
+                    <div class="match-bottom"><a href="#"><span class="match-tag">Cs:go</span></a><span class="match-date">14.05.2022</span></div>
+                </a>
+            </div>
+        </section> -->
+        <!-- section.videos>.videos-container>a>iframe.main-video^aside>(img+h3)*3^^.instagram-container>a>h2+span*6^^.twitter-container>a>.tweet-description+img -->
+        <!-- <iframe width="880" height="514" src="https://www.youtube.com/embed/Qsj4ZYT5RiY" title="ПЕРВОЕ ИНТЕРВЬЮ RAMZES666 – Возвращение в Virtus.pro" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+        <section class="merch-container">
+            <div class="merch-grid">
+                <a href="#">
+                    <div class="merch-item">
+                        <img src="assets/merch-1.png" alt="">
+                        <h4 class="merch-name">virtus.pro player jersey 2019</h4>
+                        <span class="merch-price">34$</span>
+                        <button class="btn-buy">BUY</button>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="merch-item">
+                        <img src="assets/merch-2.png" alt="">
+                        <h4 class="merch-name">virtus.pro player zipper hoodie 2019</h4>
+                        <span class="merch-price">N/A</span>
+                        <button class="btn-buy">BUY</button>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="merch-item">
+                        <img src="assets/merch-3.png" alt="">
+                        <h4 class="merch-name">virtus.pro cap 2019</h4>
+                        <span class="merch-price">N/A</span>
+                        <button class="btn-buy">BUY</button>
+                    </div>
+                </a>
+                <a href="#" class="merch-special">
+                    <div class="merch-special-item">
+                        <div></div>
+                        <h4>Virtus.pro Merch</h4>
+                        <span class="merch-price">#gogovp</span>
+                        <button class="btn-buy">SHOP</button>
+                    </div>
+                </a>
+            </div>
+        </section>
+        <section class="app">
+            <div class="app-container">
+                <h2>Embrace Bearloga</h2>
+                <p>Bearloga is the app for Virtus.pro fans that allows them to communicate with each other, receive up-to-date information about the lineups they are interested in and participate in the life of the club.</p>
+                <span>Download App</span>
+                <a href="#" class="download-as"><img src="assets/app-store.png" alt="download in appstore" width="150px" height="44.5px"></a>
+                <a href="#" class="download-gp"><img src="assets/google-play.png" alt="download in google play" width="150px" height="44.5px"></a>
+                <img src="assets/main-fan.png" alt="" class="mobile-app"></div>
+        </section>
+    </section>
+    <hr class="before-footer">
+    <footer>
+        <div class="partners-container">
+            <a href="#"><img src="assets/p1-logo.png" alt="HAVAL logo"></a>
+            <a href="#"><img src="assets/p2-logo.png" alt="BYBIT logo"></a>
+            <div class="horiz-rule hr-920"></div>
+            <div class="horiz-rule hr-920"></div>
+            <a href="#"><img src="assets/p3-logo.png" alt="METRO logo"></a>
+            <a href="#"><img src="assets/p4-logo.png" alt="SBER logo"></a>
+            <div class="horiz-rule hr-920"></div>
+            <div class="horiz-rule hr-920"></div>
+
+            <div class="horiz-rule hr-main"></div>
+            <div class="horiz-rule hr-main"></div>
+            <div class="horiz-rule hr-main"></div>
+            <div class="horiz-rule hr-main"></div>
+        </div>
+        <div class="social-media">
+            <a href="#"><img src="assets/vk.svg" alt="VK" width="40px" height="40px"><span class="social-num">532 000</span></i></a>
+            <a href="#"><img src="assets/youtube.svg" alt="YT" width="40px" height="40px"><span class="social-num">306 000</span></i></a>
+            <a href="#"><img src="assets/twitter.svg" alt="TW" width="40px" height="40px"><span class="social-num">260 000</span></i></a>
+            <a href="#"><img src="assets/telegram.svg" alt="TG" width="40px" height="40px"><span class="social-num">5 000</span></i></a>
+            <a href="#"><img src="assets/tiktok.svg" alt="TT" width="40px" height="40px"><span class="social-num">195 000</span></i></a>
+        </div>
+        <div class="copyright">
+            <span><a href="#">Privacy Policy</a> and <a href="#">Cookies Policy</a></span><br>
+            <span><u>© 2003 — 2021 VIRTUS.PRO</u><br>Copying without a hyperlink to our website is not allowed</span>
+        </div>
+    </footer>
+    <div class="cookie" id="cookie">
+        <div class="cookie-container">
+            <span>By continuing to browse, you consent to our use of cookies. <a href="#">You can read our Cookies Policy here.</a></span>
+            <button class="btn-close" onclick="closeCookie()">Close</button>
+            <div class="clear"></div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>

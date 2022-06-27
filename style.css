@@ -911,7 +911,7 @@ nav label {
         .articles-grid {
             margin-top: 80px;
             grid-template-columns: 1fr;
-            grid-template-rows: repeat(6, 1fr);
+            grid-template-rows: repeat(6, auto);
         }
 
         .articles-container figcaption {
@@ -1096,7 +1096,7 @@ nav label {
 
 .videos-container {
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 720px auto;
     width: 80%;
     margin: 100px auto 40px;
 
@@ -1105,15 +1105,21 @@ nav label {
     clip-path: var(--big-shape);
 }
 
-    .yt-video {
-        max-width: 780px;
-        height: auto;
+    .yt-video, .yt-video iframe {
+        width: 100%;
+        height: 600px;
     }
 
     .videos-container aside {
         display: grid;
+        grid-template-rows: repeat(4, 1fr);
         padding: 20px;
         background-color: var(--main-add-color);
+    }
+
+    .videos-container aside img {
+        max-width: 100%;
+        height: auto;
     }
 
     .videos-container aside > a {
@@ -1157,6 +1163,8 @@ nav label {
     width: 98%;
     height: 240px;
     margin-right: 2%;
+    overflow-y: auto;
+    scrollbar-width: thin;
     background-color: var(--main-add-color);
     clip-path: var(--big-shape);
 }
@@ -1216,6 +1224,133 @@ nav label {
     .twitter-container a:hover img {
         opacity: 0.7;
         /* filter: blur(2px); */
+    }
+
+    @media only screen and (max-width: 1400px) {
+        .videos-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr auto;
+        }
+
+        .videos-container aside {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 1fr;
+            height: fit-content;
+        }
+
+        .videos-container aside > a {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto 1fr;
+            gap: 20px;
+        }
+
+        .preview-info {
+            margin-right: 12px;
+        }
+
+        .yt-video, .yt-video iframe {
+            height: 600px;
+        }
+    }
+
+    @media only screen and (max-width: 1280px) {
+        .social-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            width: 80%;
+            margin: 0 auto 100px;
+        }
+
+        .social-container .instagram-container {
+            /* grid-template-columns: 1fr 1fr; */
+            grid-template-areas: "i i";
+        }
+
+        .instagram-container > a {
+            display: inline-block;
+            padding: 4px 12px;
+            font-weight: 600;
+            color: var(--secondary-color);
+        }
+    }
+
+    @media only screen and (max-width: 1080px) {
+        .social-container .instagram-container {
+            grid-template-areas: "i";
+        }
+
+        .instagram-container > a {
+            padding: 12px 4px 12px 8px;
+        }
+    }
+
+    @media only screen and (max-width: 920px) {
+        .videos-container {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr auto;
+        }
+
+        .yt-video, .yt-video iframe {
+            height: 320px;
+        }
+
+        .videos-container aside {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 1fr 1fr;
+        }
+        
+        .social-container {
+            grid-template-columns: 1fr;
+            column-gap: 0;
+            row-gap: 20px;
+        }
+
+        .social-container .instagram-container {
+            grid-template-areas: "i i";
+            margin: 0;
+        }
+        
+        .instagram-container > a {
+            padding: 12px 4px 12px 16px;
+        }
+
+        .twitter-container {
+            margin: 0;
+        }
+
+        .twitter-container .tweet-description {
+            opacity: 1;
+        }
+    
+    }
+
+    @media only screen and (max-width: 640px) {
+        .yt-video, .yt-video iframe {
+            height: 240px;
+        }
+
+        .social-container .instagram-container {
+            grid-template-areas: "i";
+            margin: 0;
+        }
+
+        .tweet-description {
+            text-align: justify;
+        }
+    }
+
+    @media only screen and (max-width: 400px) {
+        .yt-video, .yt-video iframe {
+            height: 180px;
+        }
+
+        .videos-container aside {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(4, 1fr);
+        }
     }
 
 /* MERCH SECTION */

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;800&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/font/bootstrap-icons.min.css" integrity="sha512-YzwGgFdO1NQw1CZkPoGyRkEnUTxPSbGWXvGiXrWk8IeSqdyci0dEDYdLLjMxq1zCoU0QBa4kHAFiRhUL3z2bow==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="style.css">
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+        <link rel="manifest" href="favicon/site.webmanifest">
+        <title>Virtus.pro - News</title>
+    </head>
+<body>
+    <div class="background">
+    </div>
+    <header>
+        <nav class="nav-desk">
+            <div class="logo-container">
+                <a href="index.html" class="nav-logo"><img src="assets/logo.png" alt="VP logo" width="60px" height="60px"></a>
+            </div>
+            <div class="navigation-container">
+                <ul>
+                    <a href="news.html"><li class="nav-els">News</li></a>
+                    <a href="teams.html"><li class="nav-els">Teams</li></a>
+                    <a href="matches.html"><li class="nav-els">Matches</li></a>
+                    <a href="results.html"><li class="nav-els">Results</li></a>
+                    <a href="shop.html"><li class="nav-els">Shop</li></a>
+                    <li class="nav-els drop-el"><a href="#"><span class="drop-a">About <i class="bi bi-caret-down-fill"></i></span></a>
+                        <ul class="dropdown">
+                            <li class="second-li"><a href="#">Abous Us</a></li>
+                            <li class="second-li"><a href="#">Team</a></li>
+                            <li class="second-li"><a href="#">Career</a></li>
+                            <li class="second-li"><a href="#">Partnership</a></li>
+                            <li class="second-li"><a href="#">Media</a></li>
+                            <li class="second-li"><a href="#">Partners</a></li>
+                            <li class="second-li"><a href="#">Contacts</a></li>
+                        </ul>
+                    </li>
+                    <a href="fan-center.html"><li class="nav-els">Fan Center</li></a>
+                </ul>
+            </div>
+            <div class="search-container">
+                <a id="search-icon" accesskey="s" onclick="toggleSearch()"><i class="bi bi-search"></i></a>
+                <div class="search-input" id="search-input">
+                    <input type="search" name="nav-search" id="nav-search" placeholder="Search..." autofocus>
+                </div>
+            </div>
+            <div class="lang-container">
+                <!-- onclick="toggleLang()" -->
+                <a href="#" class="change-lang"><span>ENG</span></a>
+                <div class="lang-container-option" id="lang-container-option">
+                    <a href="#" class="change-lang-option"><span>RUS</span></a>
+                </div>
+            </div>
+            <div class="mobile-menu">
+                <input onclick="toggleMobileMenu()" type="checkbox" name="mobile-toggle" id="mobile-toggle">
+                <label for="mobile-toggle"><span id="menu-icon"></span></label>
+                <div class="mobile-menu-container">
+                    <div class="mobile-search-container">
+                        <div class="mobile-search-input" id="search-input">
+                            <input type="search" name="nav-search" id="nav-search" placeholder="Search..." autofocus>
+                        </div>
+                        <div class="mobile-search-icon">
+                            <a href="#" id="search-icon"><i class="bi bi-search"></i></a>
+                        </div>
+                    </div>
+                    <div class="mobile-lang-container">
+                        <a href="#" class="mobile-change-lang">
+                            <div class="selected-lang">
+                                <span>ENG</span>
+                            </div>
+                        </a>
+                        <a href="#" class="mobile-change-lang">
+                            <div class="second-lang">
+                                <span>RUS</span>
+                            </div>
+                        </a>
+                    </div>
+                    <ul class="mobile-ul">
+                        <a href="news.html"><li class="nav-mobile-els">News</li></a>
+                        <a href="teams.html"><li class="nav-mobile-els">Teams</li></a>
+                        <a href="matches.html"><li class="nav-mobile-els">Matches</li></a>
+                        <a href="results.html"><li class="nav-mobile-els">Results</li></a>
+                        <a href="shop.html"><li class="nav-mobile-els">Shop</li></a>
+                        <li class="nav-els drop-mobile-el"><a href="#" onclick="toggleDropdown()"><span class="drop-a">About <i class="bi bi-caret-down-fill"></i></span></a>
+                            <ul class="dropdown-mobile" id="dropdown-mobile">
+                                <li class="mobile-li"><a href="#"><i class="bi bi-caret-right-fill"></i>Abous Us</a></li>
+                                <li class="mobile-li"><a href="#"><i class="bi bi-caret-right-fill"></i>Team</a></li>
+                                <li class="mobile-li"><a href="#"><i class="bi bi-caret-right-fill"></i>Career</a></li>
+                                <li class="mobile-li"><a href="#"><i class="bi bi-caret-right-fill"></i>Partnership</a></li>
+                                <li class="mobile-li"><a href="#"><i class="bi bi-caret-right-fill"></i>Media</a></li>
+                                <li class="mobile-li"><a href="#"><i class="bi bi-caret-right-fill"></i>Partners</a></li>
+                                <li class="mobile-li"><a href="#"><i class="bi bi-caret-right-fill"></i>Contacts</a></li>
+                            </ul>
+                        </li>
+                        <a href="fan-center.html"><li class="nav-els">Fan Center</li></a>
+                    </ul>
+                </div>
+            </div>
+            <!-- <hr> -->
+        </nav>
+    </header>
+    <section class="titlepage">
+        <h1 class="title">News</h1>
+        <div class="sorting news-sorting" id="sorting" onclick="toggleSorting()">All <i class="bi bi-caret-down-fill"></i></div>
+        <div class="dropdown-sorting" id="dropdown-sorting">
+            <form action="/">
+                <label class="form-control">
+                  <input type="checkbox" name="checkbox" />
+                  Dota 2
+                </label>
+                <label class="form-control">
+                    <input type="checkbox" name="checkbox" />
+                    Cs:go
+                </label>
+                <label class="form-control">
+                    <input type="checkbox" name="checkbox" />
+                    R6
+                </label>
+                <label class="form-control">
+                    <input type="checkbox" name="checkbox" />
+                    Outsiders
+                </label>
+                <label class="form-control">
+                    <input type="checkbox" name="checkbox" />
+                    Prodigy
+                </label>
+                <label class="form-control">
+                    <input type="checkbox" name="checkbox" />
+                    Social
+                </label>
+                <label class="form-control">
+                    <input type="checkbox" name="checkbox" />
+                    Partnership
+                </label>
+                <label class="form-control">
+                    <input type="checkbox" name="checkbox" />
+                    Warface
+                </label>
+                <label class="form-control">
+                    <input type="checkbox" name="checkbox" />
+                    Free Fire
+                </label>
+            </form>
+        </div>
+    </section>
+    <section class="articles-grid news-page">
+        <a href="#" class="articles-container">
+            <figure><img src="assets/second-article-1.png" alt="new virtus.pro jersey"></figure>
+            <figcaption>
+                <h2>New Virtus.pro jersey 2022: attention to style and details</h2>
+                <div class="article-bottoms">
+                    <h3 class="article-tag">General</h3>
+                    <span class="article-date">10.06.2022</span>
+                </div>
+            </figcaption>
+        </a>
+        <a href="#" class="articles-container">
+            <figure><img src="assets/second-article-2.png" alt="virtus.pro 2nd place"></figure>
+            <figcaption>
+                <h2>Virtus.pro takes 2nd place in Winline Dota 2 Champions League Season 11</h2>
+                <div class="article-bottoms">
+                    <h3 class="article-tag">Dota 2</h3>
+                    <span class="article-date">05.06.2022</span>
+                </div>
+            </figcaption>
+        </a>
+        <a href="#" class="articles-container">
+            <figure><img src="assets/second-article-3.png" alt="csgo roster is complete"></figure>
+            <figcaption>
+                <h2>Virtus.pro CS:GO roster is complete: n0rb3r7 and fame are new team members</h2>
+                <div class="article-bottoms">
+                    <h3 class="article-tag">Cs:go</h3>
+                    <span class="article-date">31.05.2022</span>
+                </div>
+            </figcaption>
+        </a>
+        <a href="#" class="articles-container">
+            <figure><img src="assets/second-article-4.png" alt="new virtus.pro jersey"></figure>
+            <figcaption>
+                <h2>Virtus.pro is invited to Winline Dota 2 Champions League Season 11</h2>
+                <div class="article-bottoms">
+                    <h3 class="article-tag">Dota 2</h3>
+                    <span class="article-date">31.05.2022</span>
+                </div>
+            </figcaption>
+        </a>
+        <a href="#" class="articles-container">
+            <figure><img src="assets/second-article-5.png" alt="virtus.pro 2nd place"></figure>
+            <figcaption>
+                <h2>The return of The Bear: RAMZES666 is a new Virtus.pro carry</h2>
+                <div class="article-bottoms">
+                    <h3 class="article-tag">Dota 2</h3>
+                    <span class="article-date">28.05.2022</span>
+                </div>
+            </figcaption>
+        </a>
+        <a href="#" class="articles-container">
+            <figure><img src="assets/second-article-6.png" alt="csgo roster is complete"></figure>
+            <figcaption>
+                <h2>Virtus.pro moves buster and YEKINDAR out of the active roster</h2>
+                <div class="article-bottoms">
+                    <h3 class="article-tag">Cs:go</h3>
+                    <span class="article-date">23.05.2022</span>
+                </div>
+            </figcaption>
+        </a>
+        <a href="#" class="articles-container">
+            <figure><img src="assets/add-article-1.png" alt="csgo roster is complete"></figure>
+            <figcaption>
+                <h2>Regarding the forced withdrawal of VP.Prodigy from WePlay Academy League</h2>
+                <div class="article-bottoms">
+                    <h3 class="article-tag">Cs:go</h3>
+                    <span class="article-date">20.05.2022</span>
+                </div>
+            </figcaption>
+        </a>
+        <a href="#" class="articles-container">
+            <figure><img src="assets/add-article-2.png" alt="csgo roster is complete"></figure>
+            <figcaption>
+                <h2>Outlaws will play in WePlay Academy League S4</h2>
+                <div class="article-bottoms">
+                    <h3 class="article-tag">Cs:go</h3>
+                    <span class="article-date">17.05.2022</span>
+                </div>
+            </figcaption>
+        </a>
+        <a href="#" class="articles-container">
+            <figure><img src="assets/add-article-3.png" alt="csgo roster is complete"></figure>
+            <figcaption>
+                <h2>Virtus.pro signs a Free Fire roster</h2>
+                <div class="article-bottoms">
+                    <h3 class="article-tag">Free Fire</h3>
+                    <span class="article-date">06.05.2022</span>
+                </div>
+            </figcaption>
+        </a>
+        <a href="#" class="articles-container">
+            <figure><img src="assets/add-article-4.png" alt="csgo roster is complete"></figure>
+            <figcaption>
+                <h2>Sergey Glamazda leaves Virtus.pro</h2>
+                <div class="article-bottoms">
+                    <h3 class="article-tag">General</h3>
+                    <span class="article-date">05.05.2022</span>
+                </div>
+            </figcaption>
+        </a>
+        <a href="#" class="articles-container">
+            <figure><img src="assets/add-article-5.png" alt="csgo roster is complete"></figure>
+            <figcaption>
+                <h2>Dota 2 coach boolk leaves Virtus.pro</h2>
+                <div class="article-bottoms">
+                    <h3 class="article-tag">Dota 2</h3>
+                    <span class="article-date">02.05.2022</span>
+                </div>
+            </figcaption>
+        </a>
+        <a href="#" class="articles-container">
+            <figure><img src="assets/add-article-6.png" alt="csgo roster is complete"></figure>
+            <figcaption>
+                <h2>VP.Prodigy introduces the latest addition to the CS:GO roster — lattykk</h2>
+                <div class="article-bottoms">
+                    <h3 class="article-tag">Cs:go</h3>
+                    <span class="article-date">18.04.2022</span>
+                </div>
+            </figcaption>
+        </a>
+    </section>
+    <hr class="before-footer">
+    <footer>
+        <div class="partners-container">
+            <a href="#"><img src="assets/p1-logo.png" alt="HAVAL logo"></a>
+            <a href="#"><img src="assets/p2-logo.png" alt="BYBIT logo"></a>
+            <div class="horiz-rule hr-920"></div>
+            <div class="horiz-rule hr-920"></div>
+            <a href="#"><img src="assets/p3-logo.png" alt="METRO logo"></a>
+            <a href="#"><img src="assets/p4-logo.png" alt="SBER logo"></a>
+            <div class="horiz-rule hr-920"></div>
+            <div class="horiz-rule hr-920"></div>
+
+            <div class="horiz-rule hr-main"></div>
+            <div class="horiz-rule hr-main"></div>
+            <div class="horiz-rule hr-main"></div>
+            <div class="horiz-rule hr-main"></div>
+        </div>
+        <div class="social-media">
+            <a href="#"><img src="assets/vk.svg" alt="VK" width="40px" height="40px"><span class="social-num">532 000</span></i></a>
+            <a href="#"><img src="assets/youtube.svg" alt="YT" width="40px" height="40px"><span class="social-num">306 000</span></i></a>
+            <a href="#"><img src="assets/twitter.svg" alt="TW" width="40px" height="40px"><span class="social-num">260 000</span></i></a>
+            <a href="#"><img src="assets/telegram.svg" alt="TG" width="40px" height="40px"><span class="social-num">5 000</span></i></a>
+            <a href="#"><img src="assets/tiktok.svg" alt="TT" width="40px" height="40px"><span class="social-num">195 000</span></i></a>
+        </div>
+        <div class="copyright">
+            <span><a href="#">Privacy Policy</a> and <a href="#">Cookies Policy</a></span><br>
+            <span><u>© 2003 — 2021 VIRTUS.PRO</u><br>Copying without a hyperlink to our website is not allowed</span>
+        </div>
+    </footer>
+    <div class="cookie" id="cookie">
+        <div class="cookie-container">
+            <span>By continuing to browse, you consent to our use of cookies. <a href="#">You can read our Cookies Policy here.</a></span>
+            <button class="btn-close" onclick="closeCookie()">Close</button>
+            <div class="clear"></div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>

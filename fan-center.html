@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;800&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/font/bootstrap-icons.min.css" integrity="sha512-YzwGgFdO1NQw1CZkPoGyRkEnUTxPSbGWXvGiXrWk8IeSqdyci0dEDYdLLjMxq1zCoU0QBa4kHAFiRhUL3z2bow==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="style.css">
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+        <link rel="manifest" href="favicon/site.webmanifest">
+        <title>Virtus.pro - Fan Center</title>
+    </head>
+<body>
+    <div class="background">
+    </div>
+    <header>
+        <nav class="nav-desk">
+            <div class="logo-container">
+                <a href="index.html" class="nav-logo"><img src="assets/logo.png" alt="VP logo" width="60px" height="60px"></a>
+            </div>
+            <div class="navigation-container">
+                <ul>
+                    <a href="news.html"><li class="nav-els">News</li></a>
+                    <a href="teams.html"><li class="nav-els">Teams</li></a>
+                    <a href="matches.html"><li class="nav-els">Matches</li></a>
+                    <a href="results.html"><li class="nav-els">Results</li></a>
+                    <a href="shop.html"><li class="nav-els">Shop</li></a>
+                    <li class="nav-els drop-el"><a href="#"><span class="drop-a">About <i class="bi bi-caret-down-fill"></i></span></a>
+                        <ul class="dropdown">
+                            <li class="second-li"><a href="#">Abous Us</a></li>
+                            <li class="second-li"><a href="#">Team</a></li>
+                            <li class="second-li"><a href="#">Career</a></li>
+                            <li class="second-li"><a href="#">Partnership</a></li>
+                            <li class="second-li"><a href="#">Media</a></li>
+                            <li class="second-li"><a href="#">Partners</a></li>
+                            <li class="second-li"><a href="#">Contacts</a></li>
+                        </ul>
+                    </li>
+                    <a href="fan-center.html"><li class="nav-els">Fan Center</li></a>
+                </ul>
+            </div>
+            <div class="search-container">
+                <a id="search-icon" accesskey="s" onclick="toggleSearch()"><i class="bi bi-search"></i></a>
+                <div class="search-input" id="search-input">
+                    <input type="search" name="nav-search" id="nav-search" placeholder="Search..." autofocus>
+                </div>
+            </div>
+            <div class="lang-container">
+                <!-- onclick="toggleLang()" -->
+                <a href="#" class="change-lang"><span>ENG</span></a>
+                <div class="lang-container-option" id="lang-container-option">
+                    <a href="#" class="change-lang-option"><span>RUS</span></a>
+                </div>
+            </div>
+            <div class="mobile-menu">
+                <input onclick="toggleMobileMenu()" type="checkbox" name="mobile-toggle" id="mobile-toggle">
+                <label for="mobile-toggle"><span id="menu-icon"></span></label>
+                <div class="mobile-menu-container">
+                    <div class="mobile-search-container">
+                        <div class="mobile-search-input" id="search-input">
+                            <input type="search" name="nav-search" id="nav-search" placeholder="Search..." autofocus>
+                        </div>
+                        <div class="mobile-search-icon">
+                            <a href="#" id="search-icon"><i class="bi bi-search"></i></a>
+                        </div>
+                    </div>
+                    <div class="mobile-lang-container">
+                        <a href="#" class="mobile-change-lang">
+                            <div class="selected-lang">
+                                <span>ENG</span>
+                            </div>
+                        </a>
+                        <a href="#" class="mobile-change-lang">
+                            <div class="second-lang">
+                                <span>RUS</span>
+                            </div>
+                        </a>
+                    </div>
+                    <ul class="mobile-ul">
+                        <a href="news.html"><li class="nav-mobile-els">News</li></a>
+                        <a href="teams.html"><li class="nav-mobile-els">Teams</li></a>
+                        <a href="matches.html"><li class="nav-mobile-els">Matches</li></a>
+                        <a href="results.html"><li class="nav-mobile-els">Results</li></a>
+                        <a href="shop.html"><li class="nav-mobile-els">Shop</li></a>
+                        <li class="nav-els drop-mobile-el"><a href="#" onclick="toggleDropdown()"><span class="drop-a">About <i class="bi bi-caret-down-fill"></i></span></a>
+                            <ul class="dropdown-mobile" id="dropdown-mobile">
+                                <li class="mobile-li"><a href="#"><i class="bi bi-caret-right-fill"></i>Abous Us</a></li>
+                                <li class="mobile-li"><a href="#"><i class="bi bi-caret-right-fill"></i>Team</a></li>
+                                <li class="mobile-li"><a href="#"><i class="bi bi-caret-right-fill"></i>Career</a></li>
+                                <li class="mobile-li"><a href="#"><i class="bi bi-caret-right-fill"></i>Partnership</a></li>
+                                <li class="mobile-li"><a href="#"><i class="bi bi-caret-right-fill"></i>Media</a></li>
+                                <li class="mobile-li"><a href="#"><i class="bi bi-caret-right-fill"></i>Partners</a></li>
+                                <li class="mobile-li"><a href="#"><i class="bi bi-caret-right-fill"></i>Contacts</a></li>
+                            </ul>
+                        </li>
+                        <a href="fan-center.html"><li class="nav-els">Fan Center</li></a>
+                    </ul>
+                </div>
+            </div>
+            <!-- <hr> -->
+        </nav>
+    </header>

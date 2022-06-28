@@ -5,7 +5,7 @@
 }
 
 h1, h2, h3, h4, h5, h6, p, a {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .clear {
@@ -829,7 +829,7 @@ nav label {
     }
 
     .articles-container figcaption h2 {
-        margin: 150px 20px 0;
+        margin: 100px 20px 0;
         color: var(--secondary-color);
         font-size: 20px;
         font-weight: 600;
@@ -879,6 +879,12 @@ nav label {
         color: var(--secondary-color);
     }
 
+    @media only screen and (min-width: 1680px) {
+        .articles-container figcaption h2 {
+            margin: 140px 20px 0;
+        }
+    }
+
     @media only screen and (max-width: 1280px) {
         .articles-container figcaption h2 {
             margin: calc(100% - 18vw) 20px 0;
@@ -919,7 +925,7 @@ nav label {
         }
 
         .articles-container figcaption h2 {
-            margin: calc(100% - 70vw) 20px 0;
+            margin: calc(100% - 360px) 20px 0;
         }
     }
 
@@ -1113,6 +1119,7 @@ nav label {
     .videos-container aside {
         display: grid;
         grid-template-rows: repeat(4, 1fr);
+        gap: 20px;
         padding: 20px;
         background-color: var(--main-add-color);
     }
@@ -1130,6 +1137,14 @@ nav label {
         display: grid;
         grid-template-columns: auto 1fr;
         gap: 20px;
+    }
+
+    .preview-info h3 {
+        transition: all .25s;
+    }
+
+    .videos-container aside > a:hover .preview-info h3 {
+        color: var(--main-color);
     }
 
     .videos-container img {
@@ -1962,3 +1977,140 @@ footer {
             float: right;
         }
     }
+
+
+/* NEWS PAGE */
+
+.titlepage {
+    width: 80%;
+    margin: 100px auto 0;
+}
+
+    .title {
+        font-size: 42px;
+        font-weight: 800;
+        color: var(--main-add-color);
+    }
+
+    form {
+        display: grid;
+        place-content: center;
+    }
+
+    .sorting {
+        position: relative;
+        font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 14px;
+        font-weight: 800;
+        text-transform: uppercase;
+        width: fit-content;
+        margin-top: 20px;
+        padding: 12px 18px;
+        color: var(--secondary-color);
+        background-color: var(--main-add-color);
+        cursor: pointer;
+
+        transition: all .25s;
+    }
+
+        .sorting:hover {
+            box-shadow: 0 0 60px var(--main-color); 
+        }
+
+        .dropdown-sorting {
+            display: none;
+            position: relative;
+            top: 12px;
+            left: 12px;
+            width: 200px;
+            height: auto;
+            padding: 20px;
+
+            line-height: 1.1;
+            font-weight: 600;
+            font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+
+            background-color: var(--main-add-color);
+            z-index: 3;
+            clip-path: var(--shape);
+        }
+
+        form {
+            display: grid;
+            align-content: center;
+            justify-content: start;
+        }
+          
+        .form-control {
+            text-transform: uppercase;
+            font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 14px;
+            font-weight: 800;
+            line-height: 1.1;
+            display: grid;
+            grid-template-columns: 1em auto;
+            gap: 1em;
+
+            transition: all .25s;
+            cursor: pointer;
+        }
+          
+        .form-control + .form-control {
+            margin-top: 1em;
+        }
+
+        input[type="checkbox"] {
+            cursor: pointer;
+            /* REMOVE DEFAULT CHECKBOX */
+            -webkit-appearance: none;
+            appearance: none;
+            background-color: var(--form-background);
+            margin: 0;
+            
+
+            /* ADD CUSTOM CHECKBOX [UNCHECKED] */
+            font: inherit;
+            color: var(--secondary-color);
+            width: 1.2em;
+            height: 1.2em;
+            border: 0.15em solid var(--secondary-color);
+            border-radius: 0.2em;
+            transform: translateY(-0.075em);
+            
+            display: grid;
+            place-content: center;
+        }
+          
+        input[type="checkbox"]::before {
+            /* ADD CUSTOM CHECKBOX [UNCHECKED] */
+            content: "";
+            position: relative;
+            width: 0.4em;
+            height: 0.4em;
+            box-shadow: inset 1em 1em var(--main-color);
+            transform: scale(0);
+            transform-origin: center center;
+            transition: .12s transform ease-in;
+            box-shadow: inset 1em 1em var(--main-color);
+
+            /* Windows High Contrast Mode */
+            background-color: CanvasText;
+        }
+
+        input[type="checkbox"]:checked::before {
+            transform: scale(1);
+        }
+
+        input[type="checkbox"]:focus {
+            outline: 1px solid var(--main-color);
+        }
+
+        .active-sorting {
+            clip-path: var(--shape);
+            color: var(--main-add-color);
+            background-color: var(--main-color);
+        }
+
+.news-page {
+    grid-template-rows: repeat(4, 440px);
+}

@@ -44,3 +44,15 @@ function toggleMobileMenu() {
     x.style.display = "block";
   }
 } 
+
+function toggleSorting() {
+  var x = document.getElementById("dropdown-sorting");
+  var proper = window.getComputedStyle(x, null)
+  if (proper.display === "none") {
+    x.style.display = "block";
+    document.getElementById("sorting").classList.add("active-sorting");
+  } else {
+    x.style.display = "none";
+    document.getElementById("sorting").classList.remove("active-sorting");
+  }
+} 

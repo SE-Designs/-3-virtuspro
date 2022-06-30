@@ -28,7 +28,7 @@
                 <ul>
                     <a href="news.html"><li class="nav-els">News</li></a>
                     <a href="teams.html"><li class="nav-els">Teams</li></a>
-                    <a href="matches.html"><li class="nav-els">Matches</li></a>
+                    <a href="matches.html"><li class="nav-els nav-active">Matches</li></a>
                     <a href="results.html"><li class="nav-els">Results</li></a>
                     <a href="shop.html"><li class="nav-els">Shop</li></a>
                     <li class="nav-els drop-el"><a href="#"><span class="drop-a">About <i class="bi bi-caret-down-fill"></i></span></a>
@@ -106,3 +106,132 @@
             <!-- <hr> -->
         </nav>
     </header>
+    <section class="main" id="main">
+        <section class="titlepage">
+            <h1 class="title">Matches</h1>
+            <h2>Recent Matches</h2>
+            <div class="sorting" id="sorting" onclick="toggleSorting()">Select <i class="bi bi-caret-down-fill"></i></div>
+            <div class="dropdown-sorting" id="dropdown-sorting">
+                <form action="/">
+                    <label class="form-control form-images">
+                      <input type="checkbox" name="checkbox" />
+                      <img src="assets/vp-logo.png" alt="VP" width="20px" height="20px">
+                      Dota 2
+                    </label>
+                    <label class="form-control form-images">
+                        <input type="checkbox" name="checkbox" />
+                        <img src="assets/vp-logo.png" alt="VP" width="20px" height="20px">
+                        Cs:go
+                    </label>
+                    <label class="form-control form-images">
+                        <input type="checkbox" name="checkbox" />
+                        <img src="assets/vp-logo.png" alt="VP" width="20px" height="20px">
+                        R6 Siege
+                    </label>
+                    <label class="form-control form-images">
+                        <input type="checkbox" name="checkbox" />
+                        <img src="assets/vpp-logo.png" alt="VPP" width="20px" height="20px">
+                        Cs:go
+                    </label>
+                </form>
+            </div>
+        </section>
+        <section class="match-page-container">
+            <a href="#" class="match-item">
+                <h4 class="match-name">Winline D2CL Season 11</h4>
+                <span class="match-stage">Play-Off</span>
+                <div class="match-info"><img src="assets/opponent-1.png" alt="Brame" class="team-1"><span class="match-result">0 - 2</span><img src="assets/vp-logo.png" alt="Virtus.pro" class="team-2"></div>
+                <div class="match-team-names"><span class="team-name-1">Brame</span><span class="team-name-2">Virtus.pro</span></div>
+                <hr class="match-divider">
+                <div class="match-bottom"><span class="match-date">03.06.2022</span><span class="match-tag">dota 2</span></div>
+            </a>
+            <a href="#" class="match-item">
+                <h4 class="match-name">PGL Major Antwerp 2022</h4>
+                <span class="match-stage">Legends Stage</span>
+                <div class="match-info"><img src="assets/vp-logo.png" alt="Virtus.pro" class="team-1"><span class="match-result">14 - 16</span><img src="assets/opponent-2.png" alt="Team Vitality" class="team-2"></div>
+                <div class="match-team-names"><span class="team-name-1">Virtus.pro</span><span class="team-name-2">Team Vitality</span></div>
+                <hr class="match-divider">
+                <div class="match-bottom"><span class="match-date">16.05.2022</span><span class="match-tag">Cs:go</span></div>
+            </a>
+            <a href="#" class="match-item">
+                <h4 class="match-name">PGL Major Antwerp 2022</h4>
+                <span class="match-stage">Legends Stage</span>
+                <div class="match-info"><img src="assets/opponent-3.png" alt="Cloud9" class="team-1"><span class="match-result">16 - 12</span><img src="assets/vp-logo.png" alt="Virtus.pro" class="team-2"></div>
+                <div class="match-team-names"><span class="team-name-1">Cloud9</span><span class="team-name-2">Virtus.pro</span></div>
+                <hr class="match-divider">
+                <div class="match-bottom"><span class="match-date">14.05.2022</span><span class="match-tag">Cs:go</span></div>
+            </a>
+            <a href="#" class="match-item">
+                <h4 class="match-name">European League 2022</h4>
+                <span class="match-stage">Stage I</span>
+                <div class="match-info"><img src="assets/opponent-7.png" alt="MnM Gaming" class="team-1"><span class="match-result">5 - 7</span><img src="assets/vp-logo.png" alt="Virtus.pro" class="team-2"></div>
+                <div class="match-team-names"><span class="team-name-1">MnM Gaming</span><span class="team-name-2">Virtus.pro</span></div>
+                <hr class="match-divider">
+                <div class="match-bottom"><span class="match-date">12.05.2022</span><span class="match-tag">R6 Siege</span></div>
+            </a>
+            <a href="#" class="match-item">
+                <h4 class="match-name">DPC 2022 - Eastern Europe</h4>
+                <span class="match-stage">1'st division</span>
+                <div class="match-info"><img src="assets/vp-logo.png" alt="Virtus.pro" class="team-1"><span class="match-result">2 - 1</span><img src="assets/opponent-4.png" alt="BetBoom Team" class="team-2"></div>
+                <div class="match-team-names"><span class="team-name-1">Virtus.pro</span><span class="team-name-2">BetBoom Team</span></div>
+                <hr class="match-divider">
+                <div class="match-bottom"><span class="match-date">30.04.2022</span><span class="match-tag">Dota 2</span></div>
+            </a>
+            <a href="#" class="match-item">
+                <h4 class="match-name">DPC 2022 - Eastern Europe</h4>
+                <span class="match-stage">1'st division</span>
+                <div class="match-info"><img src="assets/opponent-5.png" alt="Mind Games" class="team-1"><span class="match-result">0 - 1</span><img src="assets/vp-logo.png" alt="Virtus.pro" class="team-2"></div>
+                <div class="match-team-names"><span class="team-name-1">Mind Games</span><span class="team-name-2">Virtus.pro</span></div>
+                <hr class="match-divider">
+                <div class="match-bottom"><span class="match-date">29.04.2022</span><span class="match-tag">Dota 2</span></div>
+            </a>
+            <a href="#" class="match-item">
+                <h4 class="match-name">DPC 2022 - Eastern Europe</h4>
+                <span class="match-stage">1'st division</span>
+                <div class="match-info"><img src="assets/vp-logo.png" alt="Virtus.pro" class="team-1"><span class="match-result">2 - 1</span><img src="assets/opponent-6.png" alt="CIS Rejects" class="team-2"></div>
+                <div class="match-team-names"><span class="team-name-1">Virtus.pro</span><span class="team-name-2">CIS Rejects</span></div>
+                <hr class="match-divider">
+                <div class="match-bottom"><span class="match-date">27.04.2022</span><span class="match-tag">Dota 2</span></div>
+            </a>
+            <a href="#" class="match-item">
+                <h4 class="match-name">European League 2022</h4>
+                <span class="match-stage">Stage I</span>
+                <div class="match-info"><img src="assets/vp-logo.png" alt="Virtus.pro" class="team-1"><span class="match-result">7 - 2</span><img src="assets/opponent-8.png" alt="Rogue" class="team-2"></div>
+                <div class="match-team-names"><span class="team-name-1">Virtus.pro</span><span class="team-name-2">Rogue</span></div>
+                <hr class="match-divider">
+                <div class="match-bottom"><span class="match-date">25.04.2022</span><span class="match-tag">R6 Siege</span></div>
+            </a>
+        </section>
+    </section>
+    <hr class="before-footer">
+    <footer id="footer">
+        <div class="partners-container">
+            <a href="#"><img src="assets/p1-logo.png" alt="HAVAL logo"></a>
+            <a href="#"><img src="assets/p2-logo.png" alt="BYBIT logo"></a>
+            <div class="horiz-rule hr-920"></div>
+            <div class="horiz-rule hr-920"></div>
+            <a href="#"><img src="assets/p3-logo.png" alt="METRO logo"></a>
+            <a href="#"><img src="assets/p4-logo.png" alt="SBER logo"></a>
+            <div class="horiz-rule hr-920"></div>
+            <div class="horiz-rule hr-920"></div>
+
+            <div class="horiz-rule hr-main"></div>
+            <div class="horiz-rule hr-main"></div>
+            <div class="horiz-rule hr-main"></div>
+            <div class="horiz-rule hr-main"></div>
+        </div>
+        <div class="social-media">
+            <a href="#"><img src="assets/vk.svg" alt="VK" width="40px" height="40px"><span class="social-num">532 000</span></i></a>
+            <a href="#"><img src="assets/youtube.svg" alt="YT" width="40px" height="40px"><span class="social-num">306 000</span></i></a>
+            <a href="#"><img src="assets/twitter.svg" alt="TW" width="40px" height="40px"><span class="social-num">260 000</span></i></a>
+            <a href="#"><img src="assets/telegram.svg" alt="TG" width="40px" height="40px"><span class="social-num">5 000</span></i></a>
+            <a href="#"><img src="assets/tiktok.svg" alt="TT" width="40px" height="40px"><span class="social-num">195 000</span></i></a>
+        </div>
+        <div class="copyright">
+            <span><a href="#">Privacy Policy</a> and <a href="#">Cookies Policy</a></span><br>
+            <span><u>© 2003 — 2021 VIRTUS.PRO</u><br>Copying without a hyperlink to our website is not allowed</span>
+        </div>
+    </footer>
+</body>
+<script src="script.js"></script>
+</html>

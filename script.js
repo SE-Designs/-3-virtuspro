@@ -38,10 +38,13 @@ function toggleSearch() {
 function toggleMobileMenu() {
   var checkBox = document.getElementById("mobile-toggle");
   var x = document.getElementById("main");
+  var y = document.getElementById("footer");
   if (checkBox.checked == true){
     x.style.display = "none";
+    y.style.display = "none";
   } else {
     x.style.display = "block";
+    y.style.display = "block";
   }
 } 
 

@@ -359,8 +359,9 @@ a {
     }
 
     .mobile-lang-container {
-        width: 100%;
+        width: 90%;
         height: 80px;
+        margin: 0 auto;
         font-size: 0;
 
         background-color: var(--secondary-color);
@@ -2388,7 +2389,7 @@ footer {
 
 .desk-table, .lap-table, .mob-table {
     width: 80%;
-    margin: 20px auto 0;
+    margin: 40px auto 0;
     color: var(--secondary-color);
     font-weight: 400;
     font-size: 14px;
@@ -2466,7 +2467,26 @@ footer {
     .lap-table {
         display: none;
         border-spacing: 0;
+        border-collapse: collapse;
     }
+        
+        .lap-table th {
+            text-align: center;
+            font-size: 14px;
+            padding-right: 0;
+        }
+
+            .lap-table thead tr:nth-child(1) {
+                border-top: 2px dashed var(--main-color);
+                border-left: 2px dashed var(--main-color);
+                border-right: 2px dashed var(--main-color);
+            }
+
+            .lap-table thead tr:nth-child(2) {
+                border-left: 2px dashed var(--main-color);
+                border-right: 2px dashed var(--main-color);
+                border-bottom: 2px dashed var(--main-color);
+            }
 
         .lap-table td {
             text-align: center;
@@ -2483,8 +2503,16 @@ footer {
             margin: 8px;
         }
 
+        .lap-table tr:nth-child(3n - 2) {
+            clip-path: polygon(calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100%), 0 0);
+        }
+
+        .lap-table tr:nth-child(3n - 1) {
+            clip-path: polygon(calc(100%) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px), 0 0);
+        }
+
         .lap-table tr:nth-child(3n + 1) td {
-            padding: 12px 12px 0;
+            padding: 2px 12px 0;
         }
 
         .lap-table tr:nth-child(3n + 2) td {
@@ -2503,14 +2531,38 @@ footer {
     .mob-table {
         display: none;
         border-spacing: 0;
+        border-collapse: collapse;
     }
+
+        .mob-table th {
+            text-align: center;
+            font-size: 12px;
+            padding-right: 0;
+        }
+
+            .mob-table thead tr:nth-child(1) {
+                border-top: 2px dashed var(--main-color);
+                border-left: 2px dashed var(--main-color);
+                border-right: 2px dashed var(--main-color);
+            }
+
+            .mob-table thead tr:nth-child(2), .mob-table thead tr:nth-child(3) {
+                border-left: 2px dashed var(--main-color);
+                border-right: 2px dashed var(--main-color);
+            }
+
+            .mob-table thead tr:nth-child(4) {
+                border-left: 2px dashed var(--main-color);
+                border-right: 2px dashed var(--main-color);
+                border-bottom: 2px dashed var(--main-color);
+            }
 
         .mob-table td {
             text-align: center;
         }
 
         .mob-table td img {
-            margin: 2px;
+            margin: 8px 2px 0 2px;
         }
 
         .mob-table tr td:nth-child(odd) {
@@ -2523,6 +2575,14 @@ footer {
 
         .mob-table tr td {
             padding: 6px 12px;
+        }
+
+        .mob-table tr:nth-child(5n + 1) {
+            clip-path: polygon(calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100%), 0 0);
+        }
+
+        .mob-table tr:nth-child(5n - 1) {
+            clip-path: polygon(calc(100%) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px), 0 0);
         }
 
         .mob-table tr:nth-child(5n - 3) td:nth-child(1), .mob-table tr:nth-child(5n - 3) td:nth-child(2) {
